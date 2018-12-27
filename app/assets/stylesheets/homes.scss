@@ -1,0 +1,17 @@
+header{
+  width: 100%;
+  background: #333;
+  .site_TD{
+    height: 80px;
+    color: #FFF;
+    background: image-url("header-bg-icon.gif") no-repeat 10% top;
+    padding: 5px 0 5px 150px;
+    h1{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+}
