@@ -1,47 +1,37 @@
+- maker1 = ['2XU', 'ツータイムズユー', 'left-nemu-2xu.gif']
+- maker2 = ['adidas TECHFIT', 'アディダステックフィット', 'left-nemu-adidas.gif']
+- maker3 = ['C3fit', 'シースリーフィット', 'left-nemu-c3fit.gif']
+- maker4 = ['CW-X', 'シーダブリューエックス', 'left-nemu-cwx.gif']
+- maker5 = ['NIKE PRO', 'ナイキプロ', 'left-nemu-nike.gif']
+- maker6 = ['Reebok TAIKAN', 'リーボック タイカン', 'left-nemu-reebok.gif']
+- maker7 = ['SKINS', 'スキンズ', 'left-nemu-skins.gif']
+- maker8 = ['VENEX', 'ベネクス', 'left-nemu-venex.gif']
+- maker9 = ['UNDER ARMOUR', 'アンダーアーマー', 'left-nemu-under.gif']
+- maker10 = ['mizno BIO GEAR', 'ミズノ バイオギア', 'left-nemu-mizuno.gif']
+
+- makers = [maker1, maker2, maker3, maker4, maker5, maker6, maker7, maker8, maker9, maker10]
+
 .side__bar
   .image_area
     = image_tag ("left-bn.gif")
   .sports__maker
     %h2 トレーニングウェア
     %ul
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
-      %li
-        %p 2XU
-        %p ツータイムズユー
+      - makers.each do |maker|
+        = link_to root_path do
+          %li
+            .maker__image
+              = image_tag (maker[2])
+            .maker__name
+              %p= maker[0]
+              %p.kana= maker[1]
   .guide
     %h2 トレーニングウェアガイド
     %ul
       %li コンプレッションインナーとは？
-      %li コンプレッションインナーとは？
-      %li コンプレッションインナーとは？
-      %li コンプレッションインナーとは？
-      %li コンプレッションインナーとは？
-
+      %li 高機能インナーとは？
+      %li リカバリーウェアとは？
+      %li トレーニングウェアの選び方
+      %li フィットネスウェアの選び方
 
 

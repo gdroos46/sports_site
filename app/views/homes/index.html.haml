@@ -1,8 +1,77 @@
 = render "layouts/header"
 
-.main__container
+- maker1 = ['2XU', 'ツータイムズユー', 'img_main_2xu_s.gif']
+- maker2 = ['adidas TECHFIT', 'アディダステックフィット', 'img_main_adidas_s.gif']
+- maker3 = ['C3fit', 'シースリーフィット', 'img_main_c3fit_s.gif']
+- maker4 = ['CW-X', 'シーダブリューエックス', 'img_main_cwx_s.gif']
+- maker5 = ['NIKE PRO', 'ナイキプロ', 'img_main_nike_s.gif']
+- maker6 = ['Reebok TAIKAN', 'リーボック タイカン', 'img_main_reebok_s.gif']
+- maker7 = ['SKINS', 'スキンズ', 'img_main_skins_s.gif']
+- maker8 = ['VENEX', 'ベネクス', 'img_main_venex_s.gif']
+- maker9 = ['UNDER ARMOUR', 'アンダーアーマー', 'img_main_unuder_s.gif']
+- maker10 = ['mizno BIO GEAR', 'ミズノ バイオギア', 'img_main_mizuno_s.gif']
+
+- makers = [maker1, maker2, maker3, maker4, maker5, maker6, maker7, maker8, maker9, maker10]
+.contents
   = render "layouts/sidebar"
-  %section.slider
-  %section.maker
-  %section.description
-  %section.selections
+  .main__container
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          = image_tag ('top-bn01.jpg')
+        .swiper-slide
+          = image_tag ('top-bn02.jpg')
+        .swiper-slide
+          = image_tag ('top-bn03.jpg')
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+    .maker
+      %h2 トレーニングウェア比較
+      %ul
+        - makers.each do |maker|
+          = link_to root_path do
+            %li
+              .maker__image
+                = image_tag (maker[2])
+              .maker__name
+                %p= maker[0]
+                %p.kana= maker[1]
+    .description
+      %ul
+        %li
+          %h2 コンプレッションウェアとは？
+          .details
+            .detail__contents
+              %p 高機能インナーとは、着用するだけで保温・冷感・筋肉や体感のサポート・姿勢矯正...
+              = link_to "続きを見る", root_path
+            .detail_img
+              = image_tag ('bg_02.gif')
+        %li
+          %h2 高機能インナーとは？
+          .details
+            .detail__contents
+              %p 高機能インナーとは、着用するだけで保温・冷感・筋肉や体感のサポート・姿勢矯正・疲労回復...
+              = link_to "続きを見る", root_path
+            .detail_img
+              = image_tag ('bg_03.gif')
+        %li
+          %h2 トレーニングウェアの選び方
+          .details
+            .detail__contents
+              %p トレーニングウェアをする際、ウェアの選び方のよってトレーニング効果も変わってきます...
+              = link_to "続きを見る", root_path
+            .detail_img
+              = image_tag ('bg_04.gif')
+        %li
+          %h2 フィットネスウェアの選び方
+          .details
+            .detail__contents
+              %p ジムでの運動や筋トレ、ジョギングなど、フィットネスをする際に着るウェアによりその効果が...
+              = link_to "続きを見る", root_path
+            .detail_img
+              = image_tag ('bg_05.gif')
+    .selections
+      = image_tag ('img_banner.jpg')
+
+= render "layouts/footer"
