@@ -12,8 +12,8 @@
 - makers = [maker1, maker2, maker3, maker4, maker5, maker6, maker7, maker8, maker9, maker10]
 
 .side__bar
-  .image_area
-    = image_tag ("left-bn.gif")
+  .VENEX-image
+    = image_tag ("left-bn.gif"), alt: "VENEX"
   .sports__maker
     %h2 トレーニングウェア
     %ul
@@ -21,7 +21,7 @@
         = link_to root_path do
           %li
             .maker__image
-              = image_tag (maker[2])
+              = image_tag (maker[2]), alt: maker[0]
             .maker__name
               %p= maker[0]
               %p.kana= maker[1]
