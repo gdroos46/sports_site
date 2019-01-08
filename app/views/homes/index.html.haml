@@ -15,17 +15,16 @@
 .contents
   = render "layouts/sidebar"
   .main__container
-    .swiper-container
-      .swiper-wrapper
-        .swiper-slide
-          = image_tag ('top-bn01.jpg')
-        .swiper-slide
-          = image_tag ('top-bn02.jpg')
-        .swiper-slide
-          = image_tag ('top-bn03.jpg')
-      .swiper-pagination
-      .swiper-button-prev
-      .swiper-button-next
+    .swiper-parent
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            = image_tag ('top-bn01.jpg')
+          .swiper-slide
+            = image_tag ('top-bn02.jpg')
+          .swiper-slide
+            = image_tag ('top-bn03.jpg')
+        .swiper-pagination
     :javascript
       var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
@@ -35,12 +34,10 @@
           disableOnInteraction: false,
           reverseDirection: false
         },
-        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        },
         pagination: {
-        el: '.swiper-pagination',
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
         },
       })
     .maker
