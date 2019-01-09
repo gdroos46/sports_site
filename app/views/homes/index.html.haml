@@ -1,0 +1,83 @@
+= render "layouts/header"
+
+- maker1 = ['2XU', 'ツータイムズユー', 'img_main_2xu_s.gif']
+- maker2 = ['adidas TECHFIT', 'アディダステックフィット', 'img_main_adidas_s.gif']
+- maker3 = ['C3fit', 'シースリーフィット', 'img_main_c3fit_s.gif']
+- maker4 = ['CW-X', 'シーダブリューエックス', 'img_main_cwx_s.gif']
+- maker5 = ['NIKE PRO', 'ナイキプロ', 'img_main_nike_s.gif']
+- maker6 = ['Reebok TAIKAN', 'リーボック タイカン', 'img_main_reebok_s.gif']
+- maker7 = ['SKINS', 'スキンズ', 'img_main_skins_s.gif']
+- maker8 = ['VENEX', 'ベネクス', 'img_main_venex_s.gif']
+- maker9 = ['UNDER ARMOUR', 'アンダーアーマー', 'img_main_unuder_s.gif']
+- maker10 = ['mizno BIO GEAR', 'ミズノ バイオギア', 'img_main_mizuno_s.gif']
+
+- makers = [maker1, maker2, maker3, maker4, maker5, maker6, maker7, maker8, maker9, maker10]
+.global__container
+  .global__inner
+    = render "layouts/sidebar"
+    .main__container
+      .swiper-parent
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              = image_tag ('top-bn01.jpg'), alt: "トレーニングウェアの選び方"
+            .swiper-slide
+              = image_tag ('top-bn02.jpg'), alt: "コンプレッションウェアの選び方"
+            .swiper-slide
+              = image_tag ('top-bn03.jpg'), alt: "VENEX"
+          .swiper-pagination
+      :javascript
+        var mySwiper = new Swiper ('.swiper-container', {
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+            reverseDirection: false
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+          },
+        })
+      .makers
+        %h2 トレーニングウェア比較
+        %ul
+          - makers.each do |maker|
+            = link_to root_path do
+              %li
+                .maker__image
+                  = image_tag (maker[2]), alt: maker[0]
+                .maker__name
+                  %p= maker[0]
+                  %p.kana= maker[1]
+      .descriptions
+        %dl
+          %dt コンプレッションウェアとは？
+          %dd
+            .description__text
+              %p 高機能インナーとは、着用するだけで保温・冷感・筋肉や体感のサポート・姿勢矯正...
+              = link_to "続きを見る", root_path
+        %dl
+          %dt 高機能インナーとは？
+          %dd
+            .description__text
+              %p 高機能インナーとは、着用するだけで保温・冷感・筋肉や体感のサポート・姿勢矯正・疲労回復...
+              = link_to "続きを見る", root_path
+        %dl
+          %dt トレーニングウェアの選び方
+          %dd
+            .description__text
+              %p トレーニングウェアをする際、ウェアの選び方のよってトレーニング効果も変わってきます...
+              = link_to "続きを見る", root_path
+        %dl
+          %dt フィットネスウェアの選び方
+          %dd
+            .description__text
+              %p ジムでの運動や筋トレ、ジョギングなど、フィットネスをする際に着るウェアによりその効果が...
+              = link_to "続きを見る", root_path
+      .recovery-wear
+        = image_tag ('img_banner.jpg'), alt: "リカバリーウェアとは"
+
+  = render "layouts/footer"
