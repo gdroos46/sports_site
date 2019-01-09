@@ -5,20 +5,28 @@ header{
     width: 80%;
     height: 80px;
     color: #FFF;
-    background: image-url("header-bg-icon.gif") no-repeat 8% top;
+    background: image-url("header-bg-icon.gif") no-repeat 90px top;
     padding: 15px 0 5px 150px;
     h1{
       font-size: 24px;
       font-weight: bold;
+      span{
+        font-size: 15px;
+        font-weight: bold;
+      }
     }
     p{
       font-size: 12px;
+      color: #AAA;
     }
   }
 }
 
 .side__bar{
   width: 250px;
+  .VENEX-image{
+    margin-bottom: 5px;
+  }
   a{
     text-decoration: none;
   }
@@ -68,9 +76,11 @@ header{
   }
 }
 
-.elements{
-  padding: 20px 135px;
-  .contents{
+.global__container{
+  width: 1000px;
+  padding-top: 20px;
+  margin: 0 auto;
+  .global__inner{
     display: flex;
     .main__container{
       width: 700px;
@@ -112,7 +122,7 @@ header{
         h2{
           font-size: 22px;
           border-bottom: 2px solid #DDD;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
         ul{
           display: flex;
@@ -152,7 +162,7 @@ header{
         dl{
           width: 49%;
           border: 1px solid #AAA;
-          padding: 5px;
+          padding: 10px 5px 20px 10px;
           &:nth-child(1), &:nth-child(2){
             margin-bottom: 20px;
           }
