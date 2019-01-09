@@ -2,11 +2,12 @@ header{
   height: 90px;
   background: image-url("header-bg.gif") 0 bottom;
   .site_TD{
-    width: 80%;
+    width: 1000px;
     height: 80px;
     color: #FFF;
-    background: image-url("header-bg-icon.gif") no-repeat 90px top;
-    padding: 15px 0 5px 150px;
+    background: image-url("header-bg-icon.gif") no-repeat left top;
+    padding: 15px 0 5px 70px;
+    margin: 0 auto;
     h1{
       font-size: 24px;
       font-weight: bold;
