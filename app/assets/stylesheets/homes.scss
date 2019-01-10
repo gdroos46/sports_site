@@ -123,29 +123,41 @@ header{
           text-decoration: none;
           color: #000;
         }
-        h2{
-          font-size: 22px;
+        .makers__title{
           border-bottom: 2px solid #DDD;
           margin-bottom: 15px;
-        }
-        ul{
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          @for $num from 1 through 5{
-            li:nth-child(#{$num}){
-              margin-bottom: 10px;
-            }
+          h2{
+            font-size: 22px;
           }
-          li{
-            .maker__image{
-              width: 124px;
-              height: 80px;
-            }
-            .maker__name{
-              p{
-                text-align: center;
-                font-size: 10px;
+        }
+        .makers__content{
+          ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            li{
+              width: 130px;
+              text-align: center;
+              margin-bottom: 10px;
+              a{
+                img{
+                  margin-bottom: 5px;
+                }
+                span{
+                  &.icon{
+                    width: 55px;
+                  }
+                  &.en, &.ja{
+                    display: block;
+                  }
+                  &.en{
+                    font-size: 14px;
+                  }
+                  &.ja{
+                    font-size: 12px;
+                  }
+                }
               }
             }
           }
@@ -178,10 +190,8 @@ header{
           dd{
             display: flex;
             padding-right: 100px;
-            .description__text{
-              p{
-                font-size: 14px;
-              }
+            .descriptions__elements{
+              font-size: 14px;
               a{
                 display: block;
                 background: image-url("icon01.gif") no-repeat left center;
