@@ -3,24 +3,28 @@
 .side__bar
   .VENEX-image
     = image_tag ("left-bn.gif"), alt: "VENEX"
-  .sports__maker
-    %h2 トレーニングウェア
-    %ul
-      - makers.each do |maker|
-        = link_to root_path do
+  .side__makers
+    .side__makers__title
+      %h2 トレーニングウェア
+    .side__makers__content
+      %ul
+        - makers.each do |maker|
           %li
-            .maker__image
-              = image_tag (maker[2]), alt: maker[0]
-            .maker__name
-              %p= maker[0]
-              %p.kana= maker[1]
+            = link_to root_path do
+              %span.icon
+                = image_tag (maker[2]), alt: maker[0]
+              %span.name
+                %span.en= maker[0]
+                %span.ja= maker[1]
   .guide
-    %h2 トレーニングウェアガイド
-    %ul
-      %li= link_to "コンプレッションインナーとは？", root_path
-      %li= link_to "高機能インナーとは？", root_path
-      %li= link_to "リカバリーウェアとは？", root_path
-      %li= link_to "トレーニングウェアの選び方", root_path
-      %li= link_to "フィットネスウェアの選び方", root_path
+    .guide__title
+      %h2 トレーニングウェアガイド
+    .guide__content
+      %ul
+        %li= link_to "コンプレッションインナーとは？", root_path
+        %li= link_to "高機能インナーとは？", root_path
+        %li= link_to "リカバリーウェアとは？", root_path
+        %li= link_to "トレーニングウェアの選び方", root_path
+        %li= link_to "フィットネスウェアの選び方", root_path
 
 
