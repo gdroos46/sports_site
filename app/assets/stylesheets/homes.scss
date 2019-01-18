@@ -1,7 +1,7 @@
 header{
   height: 90px;
   background: image-url("header-bg.gif") 0 bottom;
-  .site_TD{
+  .site_title{
     width: 1000px;
     height: 80px;
     color: #FFF;
@@ -25,7 +25,7 @@ header{
 
 .side__bar{
   width: 250px;
-  .VENEX-image{
+  .advertisement{
     margin-bottom: 5px;
   }
   a{
@@ -33,7 +33,7 @@ header{
   }
   .side__makers{
     margin-bottom: 30px;
-    .side__makers__title{
+    &__title{
       background-color: #333;
       padding:5px 0 5px  15px;
       h2{
@@ -41,47 +41,47 @@ header{
       }
     }
   }
-    .side__makers__content{
-      ul{
-        li{
-          display: flex;
-          padding: 5px 0;
-          border-bottom: 1px solid #CCC;
-          a{
-            display: table;
-            span{
-              display: table-cell;
-              vertical-align: middle;
-              &.icon{
-                width: 50px;
-                padding-left: 10px;
-              }
-              &.name{
-                font-size: 12px;
-                color: #000;
-              }
-              &.en, &.ja{
-                display: block;
-                padding-left: 10px;
-              }
-              &.ja{
-                color: #AAA;
-              }
+  .side__makers__content{
+    ul{
+      li{
+        display: flex;
+        padding: 5px 0;
+        border-bottom: 1px solid #CCC;
+        a{
+          display: table;
+          span{
+            display: table-cell;
+            vertical-align: middle;
+            &.icon{
+              width: 50px;
+              padding-left: 10px;
+            }
+            &.name{
+              font-size: 12px;
+              color: #000;
+            }
+            &.en, &.ja{
+              display: block;
+              padding-left: 10px;
+            }
+            &.ja{
+              color: #AAA;
             }
           }
         }
       }
     }
+  }
   .guide{
     border: 1px solid #CCC;
-    .guide__title{
+    &__title{
       background-color: #555;
       padding:5px 0 5px  15px;
       h2{
         color: #FFF;
       }
     }
-    .guide__content{
+    &__content{
       padding-top: 10px;
       margin: 0 10px 0 10px;
       ul{
@@ -133,7 +133,7 @@ header{
           .swiper-pagination-bullet-active {
             width: 16px;
             height: 16px;
-            background: url('img_btn-panelchager.gif');
+            background: image-url('img_btn-panelchager.gif');
           }
         }
       }
@@ -191,7 +191,7 @@ header{
         @for $num from 1 through 4{
           dl:nth-child(#{$num}){
             dd{
-              background: image-url("bg_0#{$num+1}.gif") no-repeat right center / 100px 100px;
+              background-image: url("bg_0#{$num+1}.gif");
             }
           }
         }
@@ -208,16 +208,16 @@ header{
             margin-bottom: 5px;
           }
           dd{
-            display: flex;
+            font-size: 14px;
+            background-repeat: no-repeat;
+            background-size: 100px 100px;
+            background-position: right center;
             padding-right: 100px;
-            .descriptions__elements{
-              font-size: 14px;
-              a{
-                display: block;
-                background: image-url("icon01.gif") no-repeat left center;
-                padding-left: 20px;
-                margin-top: 10px;
-              }
+            a{
+              display: block;
+              background: image-url("icon01.gif") no-repeat left center;
+              padding-left: 20px;
+              margin-top: 10px;
             }
           }
         }
@@ -232,7 +232,7 @@ header{
 }
 
 footer{
-  p{
+  address{
     font-size: 10px;
     color: #AAA;
     border-top: 1px solid #AAA;

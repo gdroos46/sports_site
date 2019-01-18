@@ -1,18 +1,18 @@
-- makers = [['2XU', 'ツータイムズユー', 'left-nemu-2xu.gif'], ['adidas TECHFIT', 'アディダステックフィット', 'left-nemu-adidas.gif'], ['C3fit', 'シースリーフィット', 'left-nemu-c3fit.gif'], ['CW-X', 'シーダブリューエックス', 'left-nemu-cwx.gif'], ['NIKE PRO', 'ナイキプロ', 'left-nemu-nike.gif'], ['Reebok TAIKAN', 'リーボック タイカン', 'left-nemu-reebok.gif'], ['SKINS', 'スキンズ', 'left-nemu-skins.gif'], ['VENEX', 'ベネクス', 'left-nemu-venex.gif'], ['UNDER ARMOUR', 'アンダーアーマー', 'left-nemu-under.gif'], ['mizno BIO GEAR', 'ミズノ バイオギア', 'left-nemu-mizuno.gif']]
+= render 'layouts/makers'
 
 .side__bar
-  .VENEX-image
-    = image_tag ("left-bn.gif"), alt: "VENEX"
+  .advertisement
+    = image_tag ("left-bn.gif"), alt: "VENEX", width: 250, height: 210
   .side__makers
     .side__makers__title
       %h2 トレーニングウェア
     .side__makers__content
       %ul
-        - makers.each do |maker|
+        - @makers.each do |maker|
           %li
             = link_to root_path do
               %span.icon
-                = image_tag (maker[2]), alt: maker[0]
+                = image_tag (maker[3]), alt: maker[0], width: 40, height: 40
               %span.name
                 %span.en= maker[0]
                 %span.ja= maker[1]
