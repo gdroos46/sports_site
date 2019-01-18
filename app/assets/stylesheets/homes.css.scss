@@ -25,7 +25,7 @@ header{
 
 .side__bar{
   width: 250px;
-  .advertisement{
+  .advertisement-image{
     margin-bottom: 5px;
   }
   a{
@@ -40,32 +40,32 @@ header{
         color: #FFF;
       }
     }
-  }
-  .side__makers__content{
-    ul{
-      li{
-        display: flex;
-        padding: 5px 0;
-        border-bottom: 1px solid #CCC;
-        a{
-          display: table;
-          span{
-            display: table-cell;
-            vertical-align: middle;
-            &.icon{
-              width: 50px;
-              padding-left: 10px;
-            }
-            &.name{
-              font-size: 12px;
-              color: #000;
-            }
-            &.en, &.ja{
-              display: block;
-              padding-left: 10px;
-            }
-            &.ja{
-              color: #AAA;
+    &__content{
+      ul{
+        li{
+          display: flex;
+          padding: 5px 0;
+          border-bottom: 1px solid #CCC;
+          a{
+            display: table;
+            span{
+              display: table-cell;
+              vertical-align: middle;
+              &.icon{
+                width: 50px;
+                padding-left: 10px;
+              }
+              &.name{
+                font-size: 12px;
+                color: #000;
+              }
+              &.en, &.ja{
+                display: block;
+                padding-left: 10px;
+              }
+              &.ja{
+                color: #AAA;
+              }
             }
           }
         }
