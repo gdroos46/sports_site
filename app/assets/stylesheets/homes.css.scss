@@ -101,13 +101,13 @@ header{
 }
 
 .global__container{
-  width: 1000px;
+  width: 930px;
   padding-top: 20px;
   margin: 0 auto;
   .global__inner{
     display: flex;
     .main__container{
-      width: 750px;
+      width: 660px;
       padding-left: 20px;
       .swiper-parent{
         .swiper-container {
@@ -157,7 +157,7 @@ header{
             flex-wrap: wrap;
             margin-bottom: 10px;
             li{
-              width: 140px;
+              width: 120px;
               text-align: center;
               margin-bottom: 10px;
               a{
@@ -208,7 +208,7 @@ header{
             margin-bottom: 5px;
           }
           dd{
-            font-size: 14px;
+            font-size: 13px;
             background-repeat: no-repeat;
             background-size: 100px 100px;
             background-position: right center;
